@@ -48,6 +48,7 @@ CREATE TABLE Employees OF Employee
 
 CREATE TYPE Account AS OBJECT (
   Office        ref Branch,
+  Owner         ref Person,
   AccountNumber INT,
   AccountType   VARCHAR2(30), -- TODO make this a table?
   Balance       DECIMAL,
