@@ -48,7 +48,6 @@ CREATE TABLE Employees OF Employee
 
 CREATE TYPE Account AS OBJECT (
   Office        ref Branch,
-  Owner         ref Person,
   AccountNumber INT,
   AccountType   VARCHAR2(30), -- TODO make this a table?
   Balance       DECIMAL,
@@ -57,3 +56,9 @@ CREATE TYPE Account AS OBJECT (
   OpenDate      DATE
 );
 CREATE TABLE Accounts OF Account;
+
+CREATE TYPE AccountCustomerLink AS OBJECT (
+  Acc   ref Account,
+  Cust  ref Person
+);
+CREATE TABLE AccountCustomerLinks OF AccountCustomerLink;

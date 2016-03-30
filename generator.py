@@ -151,7 +151,6 @@ def Accounts(number):
     accounts_template = \
 """INSERT INTO Accounts VALUES (
     (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
-    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
     %d,
     '%s',
     %f,
@@ -168,5 +167,14 @@ def Accounts(number):
                 random.choice(["NULL", str(random.randint(10, 800))])
         )
 
+def AccountCustomerLinks(number):
+    links_template = \
+"""INSERT INTO AccountCustomerLinks VALUES (
+    (SELECT * FROM (SELECT ref(a) FROM Accounts a ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1)
+);"""
+    for _ in range(number):
+        print links_template
+
 if __name__ == "__main__":
-    Accounts(20)
+    AccountCustomerLinks(20)

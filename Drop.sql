@@ -1,7 +1,9 @@
+DROP TABLE AccountCustomerLinks;
 DROP TABLE Accounts;
 DROP TABLE Employees;
 DROP TABLE People;
 DROP TABLE Branches;
+DROP TYPE AccountCustomerLink;
 DROP TYPE Account;
 DROP TYPE Employee;
 DROP TYPE Person;
