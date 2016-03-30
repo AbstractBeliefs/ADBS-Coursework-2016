@@ -1,0 +1,12 @@
+DROP TABLE Accounts;
+DROP TABLE Employees;
+DROP TABLE People;
+DROP TABLE Branches;
+DROP TYPE Account;
+DROP TYPE Employee;
+DROP TYPE Person;
+DROP TYPE Branch;
+DROP TYPE LocationType;
+DROP TYPE PersonNameType;
+DROP TYPE PhoneNumberNestedType;
+DROP TYPE PhoneNumberType;
