@@ -298,3 +298,264 @@ INSERT INTO PEOPLE VALUES (
     ),
     '320934178'
 );
+
+INSERT INTO Employees VALUES (
+    PersonNameType('Ms', 'John', 'Smith'),
+    LocationType('Baker Street', 'London', 'ZK O22'),
+    PhoneNumberType('13715', '774808'),
+    PHONENUMBERNESTEDTYPE(),
+    '976976512',
+
+    NULL,
+    'Manager',
+    NULL,
+    '51478',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Ms', 'John', 'Johnson'),
+    LocationType('Baker Street', 'Manchester', 'MJ J99'),
+    PhoneNumberType('87291', '592006'),
+    PHONENUMBERNESTEDTYPE(),
+    '364721623',
+
+    NULL,
+    'Manager',
+    NULL,
+    '115305',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'John', 'Williams'),
+    LocationType('Baker Street', 'Leeds', 'IX I30'),
+    PhoneNumberType('94354', '010325'),
+    PHONENUMBERNESTEDTYPE(),
+    '798215583',
+
+    NULL,
+    'CSA',
+    NULL,
+    '114421',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'John', 'Brown'),
+    LocationType('Baker Street', 'Glasgow', 'EK Q62'),
+    PhoneNumberType('97069', '422643'),
+    PHONENUMBERNESTEDTYPE(),
+    '279169060',
+
+    NULL,
+    'Teller',
+    NULL,
+    '102210',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'John', 'Frankson'),
+    LocationType('Baker Street', 'Aberdeen', 'MM M71'),
+    PhoneNumberType('90720', '931996'),
+    PHONENUMBERNESTEDTYPE(),
+    '543770061',
+
+    NULL,
+    'Manager',
+    NULL,
+    '57549',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'John', 'Peterson'),
+    LocationType('Baker Street', 'Southampton', 'DC D95'),
+    PhoneNumberType('64633', '062594'),
+    PHONENUMBERNESTEDTYPE(),
+    '279939237',
+
+    NULL,
+    'CSA',
+    NULL,
+    '73864',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mr', 'John', 'Hemmingway'),
+    LocationType('Baker Street', 'Milton Keynes', 'VB R25'),
+    PhoneNumberType('70034', '792344'),
+    PHONENUMBERNESTEDTYPE(),
+    '462733473',
+
+    NULL,
+    'Teller',
+    NULL,
+    '35509',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mr', 'Jack', 'Smith'),
+    LocationType('Baker Street', 'Aberdeen', 'ZW E25'),
+    PhoneNumberType('94509', '690358'),
+    PHONENUMBERNESTEDTYPE(),
+    '482918080',
+
+    NULL,
+    'CSA',
+    NULL,
+    '113046',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Ms', 'Jack', 'Johnson'),
+    LocationType('Baker Street', 'Cardiff', 'SL O88'),
+    PhoneNumberType('95118', '473714'),
+    PHONENUMBERNESTEDTYPE(),
+    '984387726',
+
+    NULL,
+    'Manager',
+    NULL,
+    '92971',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mr', 'Jack', 'Williams'),
+    LocationType('Baker Street', 'Swansea', 'KS L72'),
+    PhoneNumberType('39822', '095568'),
+    PHONENUMBERNESTEDTYPE(),
+    '394881246',
+
+    NULL,
+    'Teller',
+    NULL,
+    '71396',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Ms', 'Jack', 'Brown'),
+    LocationType('Waterloo Street', 'London', 'DW G43'),
+    PhoneNumberType('13699', '248799'),
+    PHONENUMBERNESTEDTYPE(),
+    '761471778',
+
+    NULL,
+    'Teller',
+    NULL,
+    '65227',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'Jack', 'Frankson'),
+    LocationType('Waterloo Street', 'Manchester', 'MK B98'),
+    PhoneNumberType('94750', '113432'),
+    PHONENUMBERNESTEDTYPE(),
+    '423923009',
+
+    NULL,
+    'Manager',
+    NULL,
+    '113387',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'Jack', 'Peterson'),
+    LocationType('Waterloo Street', 'Leeds', 'BF J26'),
+    PhoneNumberType('97088', '238410'),
+    PHONENUMBERNESTEDTYPE(),
+    '750800098',
+
+    NULL,
+    'Teller',
+    NULL,
+    '31266',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Ms', 'Jack', 'Hemmingway'),
+    LocationType('Waterloo Street', 'Glasgow', 'KQ V95'),
+    PhoneNumberType('08698', '552926'),
+    PHONENUMBERNESTEDTYPE(),
+    '563573292',
+
+    NULL,
+    'Teller',
+    NULL,
+    '20888',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mr', 'Michael', 'Smith'),
+    LocationType('Waterloo Street', 'Aberdeen', 'YJ W68'),
+    PhoneNumberType('18660', '338765'),
+    PHONENUMBERNESTEDTYPE(),
+    '001835856',
+
+    NULL,
+    'Manager',
+    NULL,
+    '86187',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Ms', 'Michael', 'Johnson'),
+    LocationType('Waterloo Street', 'Southampton', 'QO O82'),
+    PhoneNumberType('65805', '249225'),
+    PHONENUMBERNESTEDTYPE(),
+    '423526555',
+
+    NULL,
+    'Teller',
+    NULL,
+    '109999',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mr', 'Michael', 'Williams'),
+    LocationType('Waterloo Street', 'Milton Keynes', 'ZB A78'),
+    PhoneNumberType('99204', '128776'),
+    PHONENUMBERNESTEDTYPE(),
+    '271820536',
+
+    NULL,
+    'CSA',
+    NULL,
+    '50819',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Ms', 'Michael', 'Brown'),
+    LocationType('Waterloo Street', 'Aberdeen', 'MX R36'),
+    PhoneNumberType('52005', '839623'),
+    PHONENUMBERNESTEDTYPE(),
+    '404190905',
+
+    NULL,
+    'CSA',
+    NULL,
+    '62100',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mr', 'Michael', 'Frankson'),
+    LocationType('Waterloo Street', 'Cardiff', 'QO U72'),
+    PhoneNumberType('96084', '577774'),
+    PHONENUMBERNESTEDTYPE(),
+    '584775804',
+
+    NULL,
+    'CSA',
+    NULL,
+    '93810',
+    '21-Feb-2016'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'Michael', 'Peterson'),
+    LocationType('Waterloo Street', 'Swansea', 'AO S31'),
+    PhoneNumberType('38355', '055009'),
+    PHONENUMBERNESTEDTYPE(),
+    '380379170',
+
+    NULL,
+    'Teller',
+    NULL,
+    '96500',
+    '21-Feb-2016'
+);
