@@ -559,3 +559,204 @@ INSERT INTO Employees VALUES (
     '96500',
     '21-Feb-2016'
 );
+
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    3317,
+    'savings',
+    5762.564000,
+    0.025195,
+    403,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    9956,
+    'savings',
+    172.462849,
+    0.212660,
+    34,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    2820,
+    'savings',
+    6641.607350,
+    0.137327,
+    454,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    3419,
+    'current',
+    7453.251976,
+    0.486310,
+    NULL,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    8066,
+    'current',
+    4711.509128,
+    0.001598,
+    242,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    8027,
+    'current',
+    6700.071217,
+    0.256118,
+    NULL,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    2373,
+    'savings',
+    9582.118280,
+    0.343139,
+    NULL,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    1671,
+    'current',
+    752.021070,
+    0.374262,
+    423,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    4023,
+    'savings',
+    9113.526988,
+    0.498408,
+    NULL,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    5894,
+    'current',
+    3509.312507,
+    0.482776,
+    626,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    8432,
+    'savings',
+    7832.361719,
+    0.170820,
+    NULL,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    8622,
+    'savings',
+    8812.123260,
+    0.365771,
+    NULL,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    7715,
+    'savings',
+    5082.119379,
+    0.252308,
+    NULL,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    1038,
+    'savings',
+    7813.737446,
+    0.433706,
+    NULL,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    1365,
+    'savings',
+    9002.985755,
+    0.408541,
+    NULL,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    8229,
+    'current',
+    9283.497259,
+    0.494484,
+    NULL,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    5780,
+    'savings',
+    3747.152276,
+    0.143862,
+    363,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    1344,
+    'current',
+    2245.724980,
+    0.075518,
+    275,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    5808,
+    'savings',
+    6146.866995,
+    0.492285,
+    NULL,
+    '03-May-2001'
+);
+INSERT INTO Accounts VALUES (
+    (SELECT * FROM (SELECT ref(b) FROM Branches b ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    (SELECT * FROM (SELECT ref(p) FROM People p ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM <= 1),
+    5517,
+    'savings',
+    8479.457901,
+    0.132576,
+    195,
+    '03-May-2001'
+);
