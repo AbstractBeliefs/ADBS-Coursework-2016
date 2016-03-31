@@ -73,7 +73,7 @@ INSERT INTO Employees VALUES (
     'Manager',
     (SELECT ref(b) FROM Branches b WHERE b.Address.Street = 'Lothian Road' and b.Address.City = 'Edinburgh'),
     '115305',
-    '21-Feb-2016'
+    '21-Feb-2009'
 );
 
 INSERT INTO Employees VALUES (
@@ -121,4 +121,124 @@ INSERT INTO Employees VALUES (
     '21-Dec-1993'
 );
 
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'Silver', 'Smith'),
+    LocationType('Princes Street', 'Edinburgh', 'EH2 123'),
+    PhoneNumberType('87291', '592006'),
+    PHONENUMBERNESTEDTYPE(),
+    'SS4678923',
 
+    -- Managed by Lacks William
+    (SELECT ref(e) FROM Employees e WHERE e.NiNumber = 'LW2857623'),
+    'Manager',
+    (SELECT ref(b) FROM Branches b WHERE b.Address.Street = 'Lothian Road' and b.Address.City = 'Edinburgh'),
+    '115305',
+    '21-Dec-1993'
+);
+
+-- Some Medal winners
+-- Gold
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'Gold', 'Medal'),
+    LocationType('Princes Street', 'Edinburgh', 'EH2 123'),
+    PhoneNumberType('87291', '592006'),
+    PHONENUMBERNESTEDTYPE(),
+    'GM0000000',
+
+    NULL,
+    'Manager',
+    NULL,
+    '115305',
+    '21-Dec-1993'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'Gold', 'Clerk'),
+    LocationType('Princes Street', 'Edinburgh', 'EH2 123'),
+    PhoneNumberType('87291', '592006'),
+    PHONENUMBERNESTEDTYPE(),
+    'GM0000001',
+
+    (SELECT ref(e) FROM Employees e WHERE e.NiNumber = 'GM0000000'),
+    '',
+    NULL,
+    '115305',
+    '21-Dec-2015'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'Gold', 'Clerk'),
+    LocationType('Princes Street', 'Edinburgh', 'EH2 123'),
+    PhoneNumberType('87291', '592006'),
+    PHONENUMBERNESTEDTYPE(),
+    'GM0000002',
+
+    (SELECT ref(e) FROM Employees e WHERE e.NiNumber = 'GM0000000'),
+    '',
+    NULL,
+    '115305',
+    '21-Dec-2015'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'Gold', 'Clerk'),
+    LocationType('Princes Street', 'Edinburgh', 'EH2 123'),
+    PhoneNumberType('87291', '592006'),
+    PHONENUMBERNESTEDTYPE(),
+    'GM0000003',
+
+    (SELECT ref(e) FROM Employees e WHERE e.NiNumber = 'GM0000000'),
+    '',
+    NULL,
+    '115305',
+    '21-Dec-2015'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'Gold', 'Clerk'),
+    LocationType('Princes Street', 'Edinburgh', 'EH2 123'),
+    PhoneNumberType('87291', '592006'),
+    PHONENUMBERNESTEDTYPE(),
+    'GM0000004',
+
+    (SELECT ref(e) FROM Employees e WHERE e.NiNumber = 'GM0000000'),
+    '',
+    NULL,
+    '115305',
+    '21-Dec-2015'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'Gold', 'Clerk'),
+    LocationType('Princes Street', 'Edinburgh', 'EH2 123'),
+    PhoneNumberType('87291', '592006'),
+    PHONENUMBERNESTEDTYPE(),
+    'GM0000005',
+
+    (SELECT ref(e) FROM Employees e WHERE e.NiNumber = 'GM0000000'),
+    '',
+    NULL,
+    '115305',
+    '21-Dec-2015'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'Gold', 'Clerk'),
+    LocationType('Princes Street', 'Edinburgh', 'EH2 123'),
+    PhoneNumberType('87291', '592006'),
+    PHONENUMBERNESTEDTYPE(),
+    'GM0000006',
+
+    (SELECT ref(e) FROM Employees e WHERE e.NiNumber = 'GM0000000'),
+    '',
+    NULL,
+    '115305',
+    '21-Dec-2015'
+);
+INSERT INTO Employees VALUES (
+    PersonNameType('Mrs', 'Gold', 'Clerk'),
+    LocationType('Princes Street', 'Edinburgh', 'EH2 123'),
+    PhoneNumberType('87291', '592006'),
+    PHONENUMBERNESTEDTYPE(),
+    'GM0000007',
+
+    (SELECT ref(e) FROM Employees e WHERE e.NiNumber = 'GM0000000'),
+    '',
+    NULL,
+    '115305',
+    '21-Dec-2015'
+);
