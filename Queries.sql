@@ -1,21 +1,23 @@
 /* Question 4a */
--- Select all name parts, where name has "ON" when uppercased
--- (like is case-sensitive) and in Edinburgh.
+-- Select all employees with "on" in first name. 3 marks.
 SELECT
 	e.PersonName.Title AS "Title",
 	e.PersonName.FirstName AS "First Name",
 	e.PersonName.LastName AS "Last Name"
-FROM Employees e
-WHERE UPPER(e.PersonName.FirstName) LIKE '%ON%'
-AND e.Address.City = 'Edinburgh';
+FROM
+  Employees e
+WHERE
+  UPPER(e.PersonName.FirstName) LIKE '%ON%' -- Normalise to uppercase, as LIKE is case sensitive.
+  AND e.Address.City = 'Edinburgh'; -- Select only Edinburgh residents.
 
 /* Question 4b */
+-- Find the number of savings accounts at each branch. 3 marks.
 SELECT
 	-- Get the Branch address
 	b.Address.Street AS "Branch Street",
 	b.Address.City AS "Branch City",
 	-- Get the number of accounts for the branch in a subquery
-	(SELECT COUNT(*) FROM Accounts a WHERE a.Office = ref(b)) AS "Count"
+	(SELECT COUNT(*) FROM Accounts a WHERE a.Office = ref(b) AND a.AccountType = 'savings') AS "Count"
 FROM Branches b;
 
 /* Question 4c */
@@ -55,13 +57,21 @@ WHERE
 /* Question 4e */
 /* Question 4f */
 /* Question 4g */
-SELECT COUNT(*) AS "Subordinates" FROM Employees e
-WHERE e.Manager.PersonName.Title = 'Mr'
-AND e.Manager.PersonName.LastName = 'William'
-AND e.Manager.Manager.PersonName.Title = 'Mrs'
-AND e.Manager.Manager.PersonName.LastName = 'Smith';
+-- Get the number of subordinates of Mr William, who is subordinate
+-- to Mrs Smith. 5 marks.
+SELECT
+  COUNT(*) AS "Subordinates"
+FROM
+  Employees e
+WHERE
+  e.Manager.PersonName.Title = 'Mr' -- Check the 1st manager
+  AND e.Manager.PersonName.LastName = 'William'
+  AND e.Manager.Manager.PersonName.Title = 'Mrs' -- Check the 2nd manager
+  AND e.Manager.Manager.PersonName.LastName = 'Smith';
 
 /* Question 4h */
+-- Get the medal appropriate to a worker, given length of service and
+-- management status requirements. See also Create.sql. 8 marks.
 SELECT
   e.PersonName.FirstName AS "First Name",
   e.PersonName.LastName AS "Last Name",
