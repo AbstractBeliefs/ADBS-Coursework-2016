@@ -41,21 +41,23 @@ CREATE TYPE Employee UNDER Person (
   Office    ref Branch,
   Salary    DECIMAL,
   JoinDate  DATE,
-  MEMBER FUNCTION Medal (managed INT) RETURN STRING
+  MEMBER FUNCTION Medal RETURN STRING
 );
 CREATE OR REPLACE TYPE BODY Employee AS
-  MEMBER FUNCTION Medal (managed INT) RETURN STRING IS
+  MEMBER FUNCTION Medal RETURN STRING IS
+    subordinates INT;
     yearsservice INT;
   BEGIN
+    SELECT COUNT(*) INTO subordinates FROM Employees e WHERE e.Manager.NiNumber = self.NiNumber;
     -- No function to convert a number of days into a number of years.
     -- /365 is practical but not accurate - leap years are not accounted for.
     -- Over the max 12 years we care about, there can be up to 3 missed days
     -- because of leap years. A client buying this software must accept a 3
     -- day window or request more accurate handling.
     yearsservice := (SYSDATE - self.JoinDate)/365;
-    IF (yearsservice > 12 AND managed > 6) THEN
+    IF (yearsservice > 12 AND subordinates > 6) THEN
       RETURN 'Gold';
-    ELSIF (yearsservice > 6 AND managed > 3) THEN
+    ELSIF (yearsservice > 6 AND subordinates > 3) THEN
       RETURN 'Silver';
     ELSIF (yearsservice > 4) THEN
       RETURN 'Brown';
