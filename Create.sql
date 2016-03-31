@@ -49,7 +49,7 @@ CREATE OR REPLACE TYPE BODY Employee AS
     yearsservice INT;
   BEGIN
     SELECT COUNT(*) INTO subordinates FROM Employees e WHERE e.Manager.NiNumber = self.NiNumber;
-    -- No function to convert a number of days into a number of years.
+    -- No Oracle function to convert a number of days into a number of years.
     -- /365 is practical but not accurate - leap years are not accounted for.
     -- Over the max 12 years we care about, there can be up to 3 missed days
     -- because of leap years. A client buying this software must accept a 3
@@ -86,3 +86,24 @@ CREATE TYPE AccountCustomerLink AS OBJECT (
   Cust  ref Person
 );
 CREATE TABLE AccountCustomerLinks OF AccountCustomerLink;
+
+-- Useful predicates for handling nested phone tables
+CREATE  FUNCTION getPhoneCount (t PHONENUMBERNESTEDTYPE) RETURN INT AS
+BEGIN
+  RETURN t.COUNT;
+END;
+
+CREATE FUNCTION phoneNumberExists (t PHONENUMBERNESTEDTYPE, p PHONENUMBERTYPE) RETURN INT AS
+BEGIN
+  -- Loop over every number in the subtable and
+  -- check if the number matches the pattern given.
+  -- Null is the wildcard/don't care.
+  -- Needs to return int as Oracle tables don't support bools
+  FOR i in t.FIRST .. t.LAST
+  LOOP
+    IF (t(i).areacode = p.areacode OR p.areacode IS NULL) AND (t(i).localnumber = p.localnumber OR p.localnumber IS NULL) THEN
+      RETURN 1;
+    END IF;
+  END LOOP;
+  RETURN 0;
+END;

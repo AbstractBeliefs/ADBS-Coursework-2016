@@ -56,6 +56,17 @@ WHERE
 */
 /* Question 4e */
 /* Question 4f */
+-- Find people with >1 phone, where at least 1 phone
+-- has 0770 as the area code. 5 marks.
+SELECT
+  p.PersonName.FirstName AS "First Name",
+  p.PersonName.LastName AS "Last Name",
+  t.AreaCode || '-' || t.LocalNumber AS "Phone Number"
+FROM
+  people p, table(p.SECONDARYPHONES) t
+WHERE
+  getPhoneCount(p.SECONDARYPHONES) > 1
+  AND phoneNumberExists(p.SECONDARYPHONES, PHONENUMBERTYPE('0770', NULL)) = 1;
 /* Question 4g */
 -- Get the number of subordinates of Mr William, who is subordinate
 -- to Mrs Smith. 5 marks.

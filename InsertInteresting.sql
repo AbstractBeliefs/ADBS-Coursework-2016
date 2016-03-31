@@ -242,3 +242,24 @@ INSERT INTO Employees VALUES (
     '115305',
     '21-Dec-2015'
 );
+
+-- For phone number checking
+INSERT INTO PEOPLE VALUES (
+    PERSONNAMETYPE('Ms', 'NotEnough', 'Phones'),
+    LOCATIONTYPE('Waterloo Street', 'Aberdeen', 'LU E84'),
+    PHONENUMBERTYPE('89503','172419'),
+    PHONENUMBERNESTEDTYPE(
+        PHONENUMBERTYPE('0770', '223560')
+    ),
+    '076481805'
+);
+INSERT INTO PEOPLE VALUES (
+    PERSONNAMETYPE('Ms', 'Plenty', 'Phones'),
+    LOCATIONTYPE('Waterloo Street', 'Aberdeen', 'LU E84'),
+    PHONENUMBERTYPE('89503','172419'),
+    PHONENUMBERNESTEDTYPE(
+        PHONENUMBERTYPE('0770', '029090'),
+        PHONENUMBERTYPE('71057', '223560')
+    ),
+    '076481805'
+);

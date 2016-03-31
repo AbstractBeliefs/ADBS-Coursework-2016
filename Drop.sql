@@ -1,3 +1,5 @@
+DROP FUNCTION getPhoneCount;
+DROP FUNCTION phoneNumberExists;
 DROP TABLE AccountCustomerLinks;
 DROP TABLE Accounts;
 DROP TABLE Employees;
